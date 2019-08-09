@@ -43,7 +43,14 @@ function submitBabe() {
         async: true,
         contentType: "application/json",
         success: function() {
-            console.log("success");
+            $.ajax({
+                url: '/babe-profile/',
+                type: 'GET',
+                success: function (res) {
+                    $('#TOCHANGE > div').remove()
+                    $('#TOCHANGE').append(res)
+                }
+            })
         },
         error: function(status, error) {
             console.log('Something went wrong: ', status, error);

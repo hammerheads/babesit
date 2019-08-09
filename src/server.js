@@ -4,11 +4,11 @@ const app = express();
 const port = 3000;
 
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
-  });
+});
 
 app.use(bodyParser.json());
 
@@ -50,37 +50,36 @@ app.get('/customer/:id', (req, res) => res.send(getCustomer(req.params.id)));
 
 
 // ADD A BABE
-app.post('/customer/:cid/babe', function(req, res) {    
+app.post('/customer/:cid/babe', function (req, res) {
 
-    var babe = req.body;    
+    var babe = req.body;
 
-    var customer = getCustomer(req.params.cid);    
+    var customer = getCustomer(req.params.cid);
 
-    babe.id = babes.length+1;
+    babe.id = babes.length + 1;
     babe.tracking = false;
 
     customer.babes.push(babe);
     babes.push(babe);
 
-    res.send(customer.babes[babes.length-1]);
-    
+    res.send(customer.babes[babes.length - 1]);
+
 });
 
 // GET A BABE
-app.get('/customer/:cid/babe/:bid', function(req, res) {
+app.get('/customer/:cid/babe/:bid', function (req, res) {
     res.send(getBabe(getCustomer(req.params.cid), req.params.bid));
 });
 
 // TRACK A BABE
 
-app.put('/customer/:cid/babe/:bid/track/:plan', function(req, res) {
+app.put('/customer/:cid/babe/:bid/track/:plan', function (req, res) {
 
 
-    
 })
 
 function getCustomer(id) {
-    
+
     for (var i = 0; i < customers.length; i++) {
         if (customers[i].id === parseInt(id)) {
             return customers[i];
@@ -104,25 +103,25 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 const webserver = express();
 webserver.use(express.static(__dirname + '/public'))
 
-webserver.get('/', function (req,res) {
-    res.redirect('http://'+ req.get('host') + '/index.html')
+webserver.get('/', function (req, res) {
+    res.redirect('http://' + req.get('host') + '/index.html')
 })
 
 
-webserver.get('/babe-profile/',function (req,res) {
+webserver.get('/babe-profile/', function (req, res) {
     res.sendFile(__dirname + '/views/babe-profile.html')
 })
 
 
-webserver.get('/babe-form/', function (req,res) {
+webserver.get('/babe-form/', function (req, res) {
     res.sendFile(__dirname + '/views/babe-form.html')
 })
 
-webserver.get('/babe-add/', function (req,res) {
+webserver.get('/babe-add/', function (req, res) {
     res.sendFile(__dirname + '/views/babe-add.html')
 })
 
- 
+
 /*
 webserver.get('/*', function (req,res) {
     res.redirect('http://'+ req.get('host') + '/404.html')
