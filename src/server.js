@@ -107,6 +107,9 @@ webserver.get('/', function (req, res) {
     res.redirect('http://' + req.get('host') + '/index.html')
 })
 
+webserver.get('/babe-list/', function (req, res) {
+    res.sendFile(__dirname + '/views/babe-list.html')
+})
 
 webserver.get('/babe-profile/', function (req, res) {
     res.sendFile(__dirname + '/views/babe-profile.html')
