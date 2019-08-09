@@ -88,7 +88,7 @@ function tempFormBabe() {
 
 $('#babes-show').click(function () {
     $.ajax({
-        url: '/babe-profile/',
+        url: '/babe-list/',
         type: 'GET',
         success: function (res) {
             $('#TOCHANGE > div').remove()
@@ -96,3 +96,9 @@ $('#babes-show').click(function () {
         }
     })
 })
+
+function displayBabe(babe) {
+
+
+
+}
