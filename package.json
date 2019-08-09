@@ -1,0 +1,25 @@
+{
+  "name": "canttouchmybabe-api",
+  "version": "1.0.0",
+  "description": "Hackathon Hammer_Heads API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammerheads/cattouchmybabe-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hammerheads/cattouchmybabe-API/issues"
+  },
+  "homepage": "https://github.com/hammerheads/cattouchmybabe-API#readme",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
