@@ -22,6 +22,7 @@ body {
   color: white;
   font-family: 'Montserrat';
   line-height: 1.7;
+  
 }
 
 /*
@@ -274,8 +275,10 @@ textarea {
 /* -------  Jumbotron -------- */
 
 #jumbotron {
-  margin-top:50%;
+margin-top: 50%;
 }
+
+
 
 
 /*-------MENU---------------*/
@@ -354,8 +357,9 @@ textarea {
 } */
 
 .sidebar-links {
-  margin-left: 102px;
-  margin-bottom: 15px;
+  margin-left: 118px;
+  /* margin-bottom: 15px; */
+  margin-top: 20px;
   font-size: 1.2rem;
 }
 
@@ -449,8 +453,6 @@ textarea {
   height: 100vh;
 } */
 
-
-
 .detetive-chat-container{
   border: 2px solid #dedede;
   background-color: #f1f1f1;
@@ -473,9 +475,39 @@ textarea {
   border-radius: 50%;
 }
 
-
 .detetive-chat-time{
-  float: right;
+  /* float: right; */
   color: #aaa;
 }
->>>>>>> c81e48312cdf6ce6beaafab2bb895e0f84b1afef
+
+/* ------- babe profile ----------*/
+
+#messages {
+  flex-direction: column;
+}
+
+.crop {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+ }
+ .crop img {
+  height: auto;
+  width: 200px;
+ }
+
+#babe-name {
+  margin-top: 0;
+  min-width: 270px;
+}
+
+.detetive-chat-container {
+  background: #212121;
+  border: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

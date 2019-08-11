@@ -1,15 +1,15 @@
 <!--form Page-->
-<div class="Jumbotron" id="form">
+<div class="Jumbotron" id="form" style="margin-top: 80px">
     <h1 class="text-center">New</h1>
     <form>
         <div class="form-row">
-            <div class="col">
+            <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
                     <input type="text" class="form-control" id="firstName" placeholder="Your babe's first name">
                 </div>
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
                     <input type="text" class="form-control" id="lastName" placeholder="Your babe's last name">
@@ -23,7 +23,7 @@
                     <input type="email" class="form-control" id="email" placeholder="Your babe's email address">
                 </div>
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                     <label for="phone">Phone number:</label>
                     <input type="text" class="form-control" id="phone" placeholder="Your babe's phone number">
@@ -40,10 +40,15 @@
             <input type="text" class="form-control mb-2" id="locations2" placeholder="Where is your Babe going?">
             <input type="text" class="form-control mb-2" id="locations3" placeholder="Where is your Babe going?">
         </div>
-        <div class="row">
+        <div class="form-group" >
+            <label for="url">Image URL:</label>
+            <div class="line" style="display: flex;">
+            <input type="url" class="form-control" id="img-url" placeholder="Babe Image url" value="https://i.imgur.com/2LTmiz4.jpg">
             <div class="col">
                 <button class="btn btn-primary" id="submit" onClick="submitBabe()">Submit</button>
             </div>
+            </div>
         </div>
+        
     </form>
 </div>
